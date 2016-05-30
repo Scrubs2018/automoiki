@@ -1,0 +1,293 @@
++b('footer').footer
+    .b-container
+        +e('').left
+            +e('').row
+                +e('').top-menu-wrap
+                    +b('nav').top-menu
+                        +e('a').link О мойках
+                        +e('a').link Вакансии
+                        +e('a').link Контакты
+            +e('').row
+                +e('').ad-on-site
+                    a(href="#") Реклама на сайте
+        +e('').middle
+            span 2015&nbsp;
+            a(href="#") WASHTIME.CZ
+        +e('').right
+            +e('').row
+                span Создание сайта&nbsp;
+                a(href="#") Веб студия "Оригами"
+            +e('').row
+                +e('').social-wrap
+                    +b('').social
+                        +e('a').item._vk
+                        +e('a').item._fb
+                        +e('a').item._tw
+.im-popups
+    .im-popup#add-wash
+        .im-popup-inside
+            +b('').popup._big
+                form.poster
+                    +e('').top
+                        +e('span').title Добавить автомойку
+                        +e('a')(href="#").close
+                    +e('').body
+                        p.error
+                        +e('').row
+                            +b('span').text-box__title Выберите типы обслуживаемых автомобилей
+                            +e('').col
+                                +b('label').check-a
+                                    +e('input')(type="checkbox").native
+                                    +e('span').check
+                                    +e('span').icon._legk
+                                    +e('span').title Легковой автомобиль
+                            +e('').col
+                                +b('label').check-a
+                                    +e('input')(type="checkbox").native
+                                    +e('span').check
+                                    +e('span').icon._jeep
+                                    +e('span').title Джип
+                            +e('').col
+                                +b('label').check-a
+                                    +e('input')(type="checkbox").native
+                                    +e('span').check
+                                    +e('span').icon._bus
+                                    +e('span').title Микроавтобус
+                            +e('').col
+                                +b('label').check-a
+                                    +e('input')(type="checkbox").native
+                                    +e('span').check
+                                    +e('span').icon._gruz
+                                    +e('span').title Грузовой автомобиль
+                        +e('').separate
+                        +e('').row._halfs
+                            +e('').half_col
+                                +b('').text-box
+                                    +e('span').title._inline Название мойки
+                                        +e('span').imp *
+                                        |:
+                                        +b('input')(type="text").input
+                                +b('').checkboxes
+                                    +b('span').text-box__title Тип мойки:
+                                    +b('label').check._sm
+                                        +e('input')(type="checkbox").native
+                                        +e('span').check
+                                        +e('span').icon
+                                        +e('span').title Автоматическая мойка (портальная)
+                                    +b('label').check._sm
+                                        +e('input')(type="checkbox").native
+                                        +e('span').check
+                                        +e('span').icon
+                                        +e('span').title Мойка самообслуживаний
+                                    +b('label').check._sm
+                                        +e('input')(type="checkbox").native
+                                        +e('span').check
+                                        +e('span').icon
+                                        +e('span').title Ручная автомойка
+                                +b('').text-box
+                                    +e('span').title Адрес автомойки
+                                    textarea.b-textarea
+                                +b('').select-box
+                                    +b('span').text-box__title Район:
+                                    +b('select').select
+                                        +e('option').option  = выбрать = 
+                                        +e('option').option Минск и минская область
+                                        +e('option').option Борисов
+                                        +e('option').option Жодино
+                                        +e('option').option Гомель и Гомельская область
+                                        +e('option').option Витебск и Витебская область
+                                        +e('option').option Полоцк
+                                        +e('option').option Новополцк
+                                        +e('option').option Брест и Брестская область
+                                        +e('option').option Пинск
+                                        +e('option').option Гродно и Гродненская область
+                                        +e('option').option Могилев и Могилевская область
+                                +b('').text-box
+                                    +e('span').title Режим работы:
+                                    +e('span').small_text (дни недели, время/круглосуточно)
+                                    textarea.b-textarea
+                                +b('').text-box
+                                    +e('span').title Дополнительная информация:
+                                    +e('span').small_text Любая информация, касающаяся вашей автомойки
+                                    textarea.b-textarea
+                            +e('').half_col
+                                    +e('').checkboxes._halfs
+                                        +b('span').text-box__title Услуги
+                                        +e('').half_col
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Ручная автомойка
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Бесконтактная мойка
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Холодный воск
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Горячий воск
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Твёрдый воск
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Мойка дисков
+                                            +b('label').check._sm 
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Мойка двигателя
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Мойка арок
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Мойка днища
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Нанопокрытие стёкол
+                                        +e('').half_col
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Сухая уборка салона
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Натирка пластика
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Чернение резины
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Натирка наружных пластиковых элементов
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Протирка стёкол изнутри
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Обработка кожи
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Химчистка
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Полировка фар
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Полировка кузова
+                                    +e('').checkboxes._halfs
+                                        +b('span').text-box__title Дополнительные услуги:
+                                        +e('').half_col
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title кофе/чай
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Холодные напитки
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Парковка
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title АЗС
+                                        +e('').half_col
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title СТО
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title WI/FI
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Кафе
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title предварительная запись
+                                            +b('label').check._sm
+                                                +e('input')(type="checkbox").native
+                                                +e('span').check
+                                                +e('span').title Минимаркет
+                                    +e('').checkboxes
+                                        +b('span').text-box__title Зимний пакет:
+                                        +b('label').check._sm 
+                                            +e('input')(type="checkbox").native
+                                            +e('span').check
+                                            +e('span').title обработка стекол антиобледенительным средством
+                                        +b('label').check._sm
+                                            +e('input')(type="checkbox").native
+                                            +e('span').check
+                                            +e('span').title обработка дверных замков антиобледенительным средством
+                                        +b('label').check._sm
+                                            +e('input')(type="checkbox").native
+                                            +e('span').check
+                                            +e('span').title обработка резиновых уплотнений силиконом
+                        +e('').separate
+                        +e('').row-text
+                            span Контактные данные для связи с вами
+                        +e('').row
+                            +b('').text-box
+                                +e('span').title Номер телефона
+                                    +e('span').imp *
+                                    |:
+                                +b('input')(type="text").input
+                        +e('').row
+                            +b('').text-box
+                                +e('span').title Ваше имя
+                                    +e('span').imp *
+                                    |:
+                                +b('input')(type="text").input
+                    +e('').bottom
+                        +b('a').btn Отправить
+                    
+    .im-popup#add-vacancy
+        .im-popup-inside
+            +b('').popup._middle
+                +e('').top
+                    +e('span').title Добавить вакансию
+                    +e('a').close
+                +e('').body
+                    +e('').row
+                        +b('').text-box
+                            +e('span').title Название мойки<span class="text-box__imp">*</span>
+                            +b('input')(type="text").input
+                    +e('').row
+                        +b('').text-box
+                            +e('span').title Название мойки<span class="text-box__imp">*</span>
+                            +b('input')(type="text").input
+                    +e('').separate
+                    +e('').row-text
+                        span Контактные данные для связи с вами
+                    +e('').row
+                        +b('').text-box
+                            +e('span').title Название мойки<span class="text-box__imp">*</span>
+                            textarea(value="+375").b-textarea
+                    +e('').row
+                        +b('').text-box
+                            +e('span').title Название мойки<span class="text-box__imp">*</span>
+                            textarea(placeholder="Опишите требования к соискателю").b-textarea
+                +e('').bottom
+                    +b('a').btn Отправить

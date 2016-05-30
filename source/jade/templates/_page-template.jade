@@ -1,0 +1,19 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title <%= _.slugify(pageName) %>
+		include inc/head
+	body(class="p-<%= _.slugify(pageName) %>")
+		.b-box
+			.b-common-wrap
+				include partials/header
+				
+			include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.js")

@@ -1,0 +1,1481 @@
+.b-common-wrap
+    padding-bottom 130px
+    @media $max_xs
+        padding-bottom 0
+.b-box
+    max-width 1180px
+    width 100%
+    margin 50px auto
+    background-color #fefefe
+    border-radius 30px
+    position relative
+    min-height 100%
+    overflow hidden
+    @media $max_sm
+        padding 0 10px
+    @media $max_xs
+        border-radius 0
+        margin-top 36px
+        margin-bottom 36px
+.b-container
+    padding 0 30px
+.b-header
+    padding-top 25px
+    @media $max_xs
+        padding-top 10px
+    .b-container
+        display table
+        width 100%
+        table-layout fixed
+    &__left, &__middle, &__right
+        display table-cell
+        vertical-align top
+    &__left
+        text-align left
+    &__left, &__middle, &__right
+        @media $max_xs
+            display block
+            text-align center
+    &__right
+        text-align right
+        // @media $max_xs
+        //     width 0
+        .b-header
+            &__rside-row
+                &:first-child
+                    @media $max_xs
+                        display none
+    &__middle
+        width 199px
+        @media $max_xs
+            width 150px
+            margin 0 auto
+            margin-top 25px
+            margin-bottom 30px
+    &__lside-row
+        margin-top 40px
+        @media $max_xs
+            display none
+    &__rside-row
+        & + .b-header
+            &__rside-row
+                margin-top 44px
+                @media $max_xs
+                    margin-top 24px
+    &__add-wash-wrap
+        @media $max_xs
+            display none
+    &__top-menu-wrap, &__social-wrap
+        @media $max_xs
+            display none
+    &__social-wrap, &__top-menu-wrap
+        display inline-block
+        vertical-align middle
+
+.b-logo
+    &__img
+        width 100%
+        height auto
+        &:hover
+            opacity .71
+
+.b-disc-link
+    text-align center
+    display block
+    &__link
+        color #ff4343
+        font-size 19px
+    &__inside
+        margin-left -100px
+        display inline-block
+        vertical-align middle
+        text-decoration none
+        &:hover
+            text-decoration underline
+            color #ff4343
+            opacity .71
+        &:before
+            content ''
+            sprite($s-action)
+            display block
+            margin 0 auto
+
+.b-top-menu
+    display inline-block
+    vertical-align middle
+    margin-right 15px
+    &__link
+        display inline-block
+        vertical-align middle
+        font-size 18px
+        & + .b-top-menu
+            &__link
+                margin-left 15px
+
+.b-social
+    display inline-block
+    vertical-align middle
+    &__item
+        display inline-block
+        vertical-align middle
+        &_vk
+            sprite($s-vk)
+        &_fb
+            sprite($s-fb)
+        &_tw
+            sprite($s-tw)
+        & + .b-social
+            &__item
+                margin-left 10px
+        &:hover
+            opacity .71
+
+.b-search-form
+    @media $max_xs
+        // position absolute
+        left 0
+        bottom 0
+        width 100%
+        text-align center
+    &__input
+        background-color #d9dada
+        color #898989
+    &__input, &__submit
+        display inline-block
+        vertical-align middle
+        height 28px
+        line-height 28px
+        padding 0 14px
+        border-radius 60px
+        border 0
+    &__submit
+        background-color #008dd2
+        color #fff
+        text-transform uppercase
+        font-weight 600
+        letter-spacing 1px
+        &:hover
+            background-color darken(#008dd2, 10)
+.b-add
+    position relative
+    padding-left 35px
+    font-size 19px
+    &_green
+        color #9cda5f
+        &:before
+            sprite($s-plus-green)
+    &_black
+        color #000
+        &:before
+            sprite($s-plus-black)
+    &:before
+        content ''
+        position absolute
+        left 0
+        vAlign()
+    &:hover
+        opacity .71
+    &_hd
+        display none
+        margin-left 20px
+        @media $max_xs
+            display inline-block
+
+.b-bread
+    padding 20px 0
+    border-bottom 1px dashed #5e5e5e
+    line-height 1
+    margin-bottom 24px
+    @media $max_xs
+        border-top 1px dashed #5e5e5e
+    .b-container
+        clearfix()
+    &__left
+        float left
+        @media $max_xs
+            width 100%
+            text-align center
+    &__right
+        float right
+        @media $max_xs
+            display none
+
+.b-breadcrumbs
+    &__item
+        & + .b-breadcrumbs
+            &__item
+                // padding-left 17px
+                text-decoration none
+                &:before
+                    content '/'
+                    margin 0 8px 0 5px
+                    color #b4b5b5
+                &_active
+                    font-weight 600
+                span
+                    text-decoration underline
+                    &:hover
+                        text-decoration none
+.b-footer
+    background-image url(../img/waves.png);
+    background-position 0 0
+    width 100%
+    background-repeat repeat-x
+    position relative
+    padding-top 50px
+    height 100px
+    position absolute
+    bottom 0
+    left 0
+    font-size 18px
+    @media $max_xs
+        height auto
+        position relative
+        text-align center
+        padding-top 40px
+        padding-bottom 20px
+        background-size 20%
+        background-position 0 15px
+        &__left, &__middle, &__right
+            float none
+    .b-container
+        clearfix()
+    &__middle
+        position absolute
+        width 100%
+        left 0
+        text-align center
+        @media $max_xs
+            position relative
+            margin 20px 0
+    &__left, &__right
+        position relative
+        z-index 1
+    &__left
+        float left
+        @media $max_xs
+            margin-bottom 20px
+    &__right
+        float right
+    &__ad-on-site
+        @media $max_xs
+            display none
+    &__social-wrap
+        padding-top 15px
+    &__social-wrap, &__top-menu-wrap
+        display none
+        @media $max_xs
+            display block
+
+.b-title
+    display block
+    font-weight 600
+    line-height 24px
+
+.b-contacts
+    &__content
+        margin-bottom 25px
+
+.b-contacts-cols
+    overflow hidden
+    &__col-wrap
+        margin 0 -35px
+        font-size 0
+    &__col
+        padding 0 35px
+        width (100/3)%
+        font-size 16px
+        margin-bottom 30px
+        display inline-block
+        vertical-align top
+        @media $max_xs
+            display block
+            width 100%
+
+.b-contact-item
+    padding-left 50px
+    font-size 18px
+    line-height 1.3
+    position relative
+    min-height 40px
+    padding-top 5px
+    text-align left
+    display block
+    &__title
+        font-weight 600
+        display block
+    &__row
+        display block
+        font-size 16px
+    &:before
+        content ''
+        position absolute
+        top 0
+        left 0
+    &_mail
+        &:before
+            sprite($s-mail)
+    &_addr
+        &:before
+            sprite($s-addr)
+            left 10px
+    &_skype
+        &:before
+            sprite($s-skype)
+    &_phone
+        &:before
+            sprite($s-phone)
+    &_time
+        &:before
+            sprite($s-time)
+    &_site
+        text-decoration underline
+        &:hover
+            text-decoration none
+        &:before
+            sprite($s-site)
+
+.b-items-list
+    &__top
+        margin-bottom 18px
+    &__row
+        & + .b-items-list
+            &__row
+                margin-top 34px
+.b-item
+    border 2px solid #000
+    border-radius 16px
+    padding 14px 20px
+    font-size 18px
+    line-height 1.3
+    &__top
+        clearfix()
+        margin-bottom 10px
+        &-left
+            float left
+            a
+                color #000
+                text-decoration none
+                &:hover
+                    text-decoration underline
+        &-right
+            float right
+    &__black
+        font-weight 600
+    &__content
+        clearfix()
+        > *:last-child
+            margin-bottom 0
+        a
+            float right
+
+a.b-item__image-link
+    float left
+    padding-right 10px
+    &:hover
+        opacity .71
+
+.b-popup
+    border-radius 16px
+    background-color #fff
+    box-shadow 0 0 14px 1px alpha(#000, .2)
+    text-align left
+    &__col
+        padding-bottom 10px
+    @media $max_xs
+        &__col
+            margin 20px 0
+            &:last-child
+                margin-bottom 40px
+        &__col, &__half_col
+            display block
+            width 100%
+        &_big
+            min-width auto
+            .b-check
+                white-space nowrap
+        ._halfs
+            margin 0
+    &__top
+        background-color $blue
+        padding 9px 12px
+        border-top-left-radius 16px
+        border-top-right-radius 16px
+        position relative
+    &__close
+        display inline-block
+        vertical-align top
+        sprite($s-close-popup)
+        position absolute
+        vAlign()
+        right 10px
+    &__title
+        color #fff
+        font-weight 600
+        font-size 18px
+    &__body
+        padding-top 20px
+    &__row
+        padding 0 44px
+        & + .b-popup
+            &__row
+                margin-top 22px
+        &:last-child
+            margin 0
+    &__separate
+        height 1px
+        border-bottom 1px dashed #787878
+        margin 18px 0
+    &__bottom
+        padding 29px 44px
+        &_center
+            text-align center
+    &__row-text
+        margin-bottom 10px
+        padding 0 44px
+    &__checkboxes
+        padding-bottom 10px
+    &__half
+        &_col
+            .b-check
+                display block
+                padding 3px 0
+    &_big
+        max-width 600px
+        min-width 300px
+    &_middle
+        max-width 600px
+        min-width 300px
+    &_sm
+        width 270px
+        .b-btn_md
+            font-size 18px
+            height 28px
+            line-height 28px
+            padding 0 36px
+        .b-popup
+            &__row
+                padding 0 10px
+                & + .b-popup
+                    &__row
+                        margin-top 15px
+            &__body
+                padding-top 10px
+            &__bottom
+                padding-top 10px
+                padding-bottom 10px
+    .b-text-box,
+    .b-select-box,
+    .b-checkboxes
+        padding-bottom 10px
+
+.b-text-box
+    &__title
+        display block
+        text-align left
+        font-size 17px
+        font-weight 600
+        line-height 1.8
+    &__small
+        &_text
+            font-size 15px
+            padding-bottom 10px
+            display block
+    &__imp
+        color red
+
+.b-checkboxes
+    padding-bottom 10px
+    .b-check
+        display block
+        padding 3px 0
+
+.b-input, .b-textarea
+    display block
+    width 100%
+    border 1px solid #787878
+    border-radius 4px
+
+.b-input
+    height 34px
+    line-height 34px
+    padding 0 12px
+
+.b-textarea
+    height 100px
+    padding 12px
+
+.b-btn
+    border 0
+    white-space nowrap
+    display inline-block
+    vertical-align top
+    background-color $blue
+    color #fff
+    font-weight 600
+    text-transform uppercase
+    font-size 17px
+    padding 0 15px
+    letter-spacing 1px
+    border-radius 100px
+    height 38px
+    line-height 38px
+    text-decoration none
+    &:hover
+        background-color darken($blue, 5)
+    &:active
+        background-color darken($blue, 10)
+    &_loading
+        position relative
+        color transparent !important
+        &:after
+            content ''
+            position absolute
+            align()
+            background-image url(../img/loader.gif)
+            width 20px
+            height 20px
+        &:hover
+            background-color $blue
+    &_md
+        height 24px
+        line-height 24px
+        font-size 15px
+    &_show-more
+        width 250px
+        font-weight 300
+
+.b-disc-label
+    display inline-block
+    height 49px
+    line-height 52px
+    background-color #f00
+    color #fff
+    padding-left 18px
+    text-transform uppercase
+    font-weight 600
+    font-size 20px
+    margin-right 17px
+    padding-right 15px
+    position relative
+    margin-left -30px
+    letter-spacing 2px
+    @media $max_xs
+        margin-left -20px
+    &:after
+        content ''
+        position absolute
+        top 0
+        right -20px
+        sprite($s-action-label-after)
+
+.b-disc
+    padding-bottom 16px
+    margin-bottom 20px
+    border-bottom 1px dashed #ff3535
+    &__top
+        display table
+        width 100%
+        table-layout fixed
+        margin-bottom 17px
+        &-left, &-right
+            display table-cell
+            vertical-align top
+            @media $max_xs
+                display block
+        &-left
+            width 230px
+        &-right
+            padding-top 10px
+    &__row
+        & + .b-disc
+            &__row
+                margin-top 24px
+
+.b-disc-item
+    line-height 1.6
+    &__body
+        *:last-child
+            margin-bottom 0
+    &__title
+        color #ff3535
+        font-weight 600
+
+.b-washing-box
+    &__wrap
+        display table
+        width 100%
+        table-layout fixed
+        margin-bottom 20px
+    &__left, &__right
+        display table-cell
+        vertical-align top
+        @media $max_xs
+            display block
+    &__left
+        width 220px
+        @media $max_xs
+            margin 0 auto
+    &__right
+        padding-left 30px
+        @media $max_xs
+            padding-left 0
+    &__logo
+        margin-top 60px
+        width 100%
+        height auto
+        @media $max_xs
+            margin-top 0
+            margin-bottom 20px
+    &__bottom
+        @media $max_xs
+            padding 10px 0
+    &__title
+        margin-bottom 10px
+    &__right-row
+        & + .b-washing-box
+            &__right-row
+                margin-top 26px
+
+.b-list-box
+    &__title
+        display block
+        font-weight 600
+        margin-bottom 3px
+        font-size 16px
+    &__list
+        font-size 16px
+        line-height 1.5
+        margin-bottom 0
+        list-style none
+        @media $max_xs
+            font-size 15px
+    &__item
+        margin-bottom 0
+        &:before
+            content '-'
+            margin-right 6px
+
+.b-btn-b
+    background-color #f00
+    height 28px
+    line-height 28px
+    color #fff
+    text-decoration none
+    font-size 15px
+    display inline-block
+    vertical-align top
+    white-space nowrap
+    padding 0 15px
+    text-transform uppercase
+    border-radius 70px
+    position relative
+    overflow hidden
+    @media $max_xs
+        height 35px
+        line-height 35px
+    &:before
+        content ''
+        position absolute
+        width 95%
+        height 15px
+        border-radius 100px
+        background-color alpha(#fff, .5)
+        top 0
+        hAlign()
+    &:hover
+        background-color #4ad300
+
+.b-services-icons
+    @media $max_xs
+        text-align center
+    &__icon
+        display inline-block
+        vertical-align top
+        border-radius 50%
+        margin 0 6px
+        @media $max_xs
+            width 18%
+            margin-left 2.5%
+            margin-bottom 2.5%
+            margin-right 0
+            &:nth-child(5n + 1)
+                margin-left 0
+
+
+.b-washing
+    margin-bottom 30px
+    &__main
+        margin-bottom 28px
+        clearfix()
+        @media $max_xs
+            margin-bottom 10px
+    &__left, &__right
+        float left
+        @media $max_xs
+            float none
+            width 100%
+    &__left
+        width 64%
+    &__right
+        width 36%
+        @media $max_xs
+            padding-top 15px
+            .b-btn-b
+                display block
+                width 100%
+                text-align center
+                font-size 18px
+    &__contacts
+        margin-top 22px
+    &__right-row
+        & + .b-washing
+            &__right-row
+                margin-top 18px
+    &__map
+        width 100%
+        min-height 230px
+        background-color #ddd
+        margin-top 20px
+    owlNav($s-owl-prev, $s-owl-next, 0 40px)
+    .owl-prev, .owl-next
+        &:hover
+            opacity .71
+
+.b-rev-icon
+    display block
+    color #000
+    font-size 18px
+    position relative
+    &__inside
+        display inline-block
+        vertical-align middle
+        margin-left 5px
+    &:before
+        content ''
+        display inline-block
+        vertical-align middle
+    &_views
+        &:before
+            sprite($s-views)
+    &_comments
+        &:before
+            sprite($s-comments)
+    &_likes
+        &:before
+            sprite($s-likes)
+
+.b-send-review
+    overflow hidden
+    &__top-items-wrap
+        margin 0 -12px
+        clearfix()
+    &__top
+        padding-bottom 22px
+        margin-bottom 22px
+        border-bottom 1px dashed #5e5e5e
+        &-item
+            float left
+            margin 0 12px
+    &__body
+        padding-bottom 22px
+        margin-bottom 22px
+        border-bottom 1px dashed #5e5e5e
+    &__body-inside
+        width 75%
+        @media $max_xs
+            width 100%
+    &__title
+        margin-bottom 12px
+    @media $max_xs
+        .b-btn
+            display block
+            width 100%
+            height 46px
+            line-height 46px
+
+.b-soc
+    display inline-block
+    vertical-align middle
+    &_fb
+        sprite($s-fb-md)
+    &_tw
+        sprite($s-tw-md)
+    &_vk
+        sprite($s-vk-md)
+    &_gp
+        sprite($s-gp-md)
+    &_ya
+        sprite($s-ya-md)
+    &:hover
+        opacity .71
+
+.b-review-links
+    margin 0 -10px
+    &__col
+        display inline-block
+        vertical-align middle
+        margin 0 10px
+    &__why
+        color #9d9e9e
+
+.b-social-icons
+    margin 0 -5px
+    &__col
+        display inline-block
+        vertical-align middle
+        margin 0 5px
+
+.b-input-a, .b-textarea-a
+    display block
+    border-radius 17px
+    background-color #d9dada
+    color #727271
+    border 0
+    width 100%
+
+.b-input-a
+    height 37px
+    line-height 37px
+    padding 0 17px
+
+.b-textarea-a
+    padding 17px
+
+.b-review-form
+    &__row
+        margin 15px 0
+        > *
+            margin 0
+            font-size 19px
+            placeholder(#828282)
+        &:first-child
+            margin-top 0
+            @media $max_xs
+                display none
+        &:last-child
+            margin-bottom 0
+    &__recommend
+        color #9d9e9e
+        position relative
+        padding-left 35px
+        height 30px
+        line-height 30px
+        &:before
+            content ''
+            position absolute
+            sprite($s-like-md)
+            // top -8px
+            vAlign()
+            left 0
+            top -5px
+        &:hover
+            opacity .71
+    @media $max_xs
+        padding-top 20px
+        .error
+            top 0 !important
+            left 0
+            text-align left !important
+
+.b-title-a
+    font-size 24px
+    display block
+    font-weight 600
+    color #000
+
+.b-banner
+    margin 20px 0
+    &__img
+        width 100%
+        height auto
+
+.b-sel-form
+    // overflow hidden
+    padding-bottom 20px
+    @media $max_xs
+        .b-reset
+            margin-bottom 16px
+        .b-btn
+            display block
+            width 100%
+            margin-left 0
+    &__col-wrap
+        margin 0 -20px
+        clearfix()
+        @media $max_xs
+            padding-top 25px
+            & + .b-sel-form
+                &__col-wrap
+                    .b-sel-form
+                        &__col
+                            padding-bottom 0
+                            border-bottom 0
+                            margin-bottom 0
+                        &__line
+                            padding 0
+    &__col
+        width 25%
+        float left
+        padding 0 20px
+        position relative
+        &:before
+            content ''
+            position absolute
+            width 1px
+            bottom 0
+            left 0
+            height 100%
+            border-left 1px dashed #b9b9b9
+        &:first-child
+            &:before
+                border-left 0
+        @media $max_xs
+            width 100%
+            padding-bottom 20px
+            margin-bottom 20px
+            border-bottom 1px solid #ccc
+    &__line
+        margin 20px 0
+        @media $max_xs
+            padding 0 40px
+            &:last-child
+                margin-bottom 0
+    &__bottom
+        margin-top 6px
+        clearfix()
+        @media $max_xs
+            text-align center
+            &-left, &-right
+                float none
+            &-left
+                margin-bottom 20px
+        &-left
+            float left
+        &-right
+            float right
+            > *
+                display inline-block
+                vertical-align middle
+                margin-left 15px
+
+.b-check-a
+    position relative
+    display block
+    text-align center
+    height 80px
+    cursor pointer
+    user-select none
+    &__native
+        display none
+        & + .b-check-a
+            &__check
+                position absolute
+                left 26px
+                top 20px
+                sprite($s-radio-off)
+        &:checked
+            & + .b-check-a
+                &__check
+                    sprite($s-radio-on)
+    &__icon
+        display inline-block
+        vertical-align middle
+        &_legk
+            sprite($s-legk)
+        &_jeep
+            sprite($s-jeep)
+        &_bus
+            sprite($s-bus)
+        &_gruz
+            sprite($s-gruz)
+    &__title
+        font-weight 600
+        font-size 18px
+        position absolute
+        bottom 0
+        left 0
+        width 100%
+    &:hover
+        opacity .71
+
+.b-check
+    cursor pointer
+    user-select none
+    white-space nowrap
+    &__native
+        display none
+        & + .b-check
+            &__check
+                display inline-block
+                vertical-align middle
+                sprite($s-check-off)
+        &:checked
+            & + .b-check
+                &__check
+                    sprite($s-check-on)
+    &__title
+        font-size 17px
+        white-space normal
+        display inline-block
+        vertical-align middle
+        margin-left 8px
+    &_sm
+        .b-check
+            &__title
+                font-size 15px
+            &__native
+                & + .b-check
+                    &__check
+                        sprite($s-check-mini-off)
+                &:checked
+                    & + .b-check
+                        &__check
+                            sprite($s-check-mini-on)
+    &:hover
+        opacity .71
+
+.b-reset
+    text-decoration none
+    position relative
+    appearance none !important
+    background-color transparent
+    border 0
+    cursor pointer
+    &__native
+        display none
+    &__title
+        font-size 18px
+    &:before
+        content ''
+        sprite($s-reset)
+        position absolute
+        left -20px
+        top 1px
+    &:after
+        content ''
+        position absolute
+        bottom -2px
+        left 0
+        width 100%
+        height 1px
+        border-bottom 1px dotted #ff4949
+    &:hover
+        opacity .71
+        &:after
+            opacity 0
+
+.b-more-serv
+    display inline-block
+    vertical-align middle
+    height 25px
+    line-height 25px
+
+.b-where-i
+    text-decoration none
+    position relative
+    color #000
+    margin-left 26px
+    &:before
+        content ''
+        position absolute
+        sprite($s-where-i)
+        top -6px
+        left -26px
+    &:after
+        content ''
+        position absolute
+        bottom -1px
+        border-bottom 1px dashed $blue
+        left 0
+        width 100%
+        font-size 15px
+    &:hover
+        opacity .71
+        &:after
+            opacity 0
+.b-map
+    height 400px
+    background-color #ddd
+    #map
+        width 100%
+        height 100%
+
+.b-companies
+    margin-bottom 130px
+    @media $max_xs
+        margin-bottom 0
+    &__row
+        margin 14px 0
+    &__show-more-wrap
+        text-align center
+    .show-more
+        display inline-block
+        text-align center
+        font-weight 300
+        text-decoration none
+        text-transform uppercase
+        color #fff
+
+
+.b-company
+    display table
+    width 100%
+    table-layout fixed
+    border-top 1px dashed #636363
+    border-bottom 1px dashed #636363
+    padding 16px 0
+    position relative
+    a
+        text-decoration none
+    @media $max_xs
+        border 1px dashed #636363
+        &_vip
+            border 2px solid #00a0e3
+    .b-disc-label
+        display none
+    .b-icons
+        white-space nowrap
+        @media $max_xs
+            white-space normal
+    &__left, &__right
+        float left
+        width 50%
+        @media $max_xs
+            float none
+            width 100%
+    &__left
+        display table
+        table-layout fixed
+    &__half
+        width 50%
+        float left
+        @media $max_xs
+            width 100%
+            float none
+        &_center
+            text-align center
+    &__logo
+        width 100%
+        height auto
+    &__line
+        margin 3px 0
+    &__top
+        margin-bottom 15px
+    &__title
+        font-size 25px
+        font-weight 600
+        display block
+        margin-bottom 10px
+    &__list
+        margin-bottom 0
+        list-style none
+        height 186px
+        overflow hidden
+        @media $max_xs
+            height auto
+        li
+            margin-bottom 0px
+            line-height 20px
+        @media $max_xs
+            height auto
+            overflow visible
+        li
+            &:before
+                content '-'
+                margin-right 5px
+    &__line
+        @media $max_xs
+            padding 0 40px
+    &__logo-wrap, &__info
+        display table-cell
+        vertical-align middle
+        @media $max_xs
+            display block
+    &__logo-wrap
+        width 220px
+        a
+            display block
+            &:hover
+                opacity .71
+        @media $max_xs
+            margin 50px auto 30px
+    &__info
+        padding-left 50px
+        a
+            text-decoration underline
+            border-bottom 0
+            padding-right 20px
+            line-height 29px
+            &:hover
+                text-decoration none
+        @media $max_xs
+            padding-left 0
+            text-align center
+            margin-bottom 30px
+    &_vip
+        border-style solid
+        border-width 2px
+        border-color $blue
+        border-left 0
+        border-right 0
+        &:after
+            content ''
+            position absolute
+            top -1px
+            right -1px
+            sprite($s-vip)
+    &_disc
+        .b-disc-label
+            position absolute
+            display block
+            left 0
+            top 5px
+            margin-left 0
+            z-index 1
+            @media $max_xs
+                top -1px
+
+.b-icons
+    margin 0 -5px
+    @media $max_xs
+        text-align center
+    &__icon
+        margin 0 5px
+        display inline-block
+        vertical-align middle
+        &:hover
+            opacity .71
+        @media $max_xs
+            margin-bottom 8px
+.b-more-serv
+    text-decoration none
+    color #000
+    &:after
+        content ''
+        display inline-block
+        vertical-align middle
+        sprite($s-tr)
+        margin-left 6px
+    &:hover
+        opacity .71
+
+.b-more-box
+    position absolute
+    z-index 1
+    display none
+    @media $max_xs
+        width 100%
+        left 0
+    &_visible
+        display block
+
+.b-sel-region
+    font-size 18px
+    &__title
+        margin-right 10px
+    &__link
+        &:after
+            @extend .b-more-serv:after
+
+.b-sel-region-wrap
+    position absolute
+    margin-top 10px
+    left 0
+    max-width 580px
+    z-index 2
+    display none
+    .b-popup_sm
+        width auto
+    .b-popup__body
+        padding-top 0
+    .b-btn
+        float right
+        margin-top -5px
+        @media $max_xs
+            float none
+    .b-popup__bottom
+        padding 12px 10px 16px 10px
+        &-text
+            font-weight 600
+            @media $max_xs
+                display block
+                margin-bottom 4px
+        @media $max_xs
+            text-align center
+            line-height 1.6
+    &_visible
+        display block
+
+.b-sel-region-box
+    display table
+    width 100%
+    table-layout fixed
+    border-bottom 1px solid #dddede
+    &__left, &__right
+        display table-cell
+        vertical-align top
+    &__left
+        width 40%
+        border-right 1px solid #dddede
+    &__item
+        padding 9px
+        display block
+        text-decoration none
+        color #000
+        &_active, &:hover
+            background-color #d9dada
+.b-call
+    font-weight 600
+    font-size 18px
+    text-decoration none
+    border-bottom 1px dashed #008dd2
+    &:hover
+        border-bottom 0
+
+#add-vacancy .b-popup
+    width 600px
+    @media $max_xs
+        width auto
+
+.b-mobile-btns
+    display none
+    padding 15px 0
+    text-align center
+    border-top 1px dashed #787878
+    border-bottom 1px dashed #787878
+    &__item
+        padding 4px 0
+    @media $max_xs
+        display block
+
+.b-mob-link
+    display inline-block
+    text-decoration none
+    line-height 40px
+    height 40px
+    border-radius 50px
+    color #fff
+    text-transform uppercase
+    font-size 16px
+    text-align center
+    position relative
+    width 250px
+    &_red
+        background-color #ff0000
+        &:hover
+            background-color darken(#ff0000, 5)
+        &:active
+            background-color darken(#ff0000, 10)
+    &_green
+        background-color #75cb1f
+        &:hover
+            background-color darken(#75cb1f, 5)
+        &:active
+            background-color darken(#75cb1f, 10)
+    &_icon
+        &:before
+            margin 0 5px
+            display inline-block
+            vertical-align baseline
+    &_pluse
+        &:before
+            content '+'
+    &_percent
+        &:before
+            content '%'
+
+
+.im-sbox
+    position relative
+    color #000;
+    font-size 15px
+    text-align left
+    text-transform uppercase
+    .im-sbox-active
+        position relative
+        z-index 1
+        height 33px
+        line-height 33px
+        border 1px solid #787878
+        cursor pointer
+        color #000
+        padding 0 10px
+        border-radius 3px
+        &:before,
+        &:after
+            content ''
+            position absolute
+        &:after
+            top 11px
+            right 8px
+            border-top 9px solid #fff
+            border-right 9px solid transparent
+            border-bottom 9px solid transparent
+            border-left 9px solid transparent
+        &:before
+            top 0
+            right 0
+            width 35px
+            height 31px
+            background-color #2b2a29
+    .im-sbox-select
+        position absolute
+        width 100%
+        overflow hidden
+        z-index 2
+        visibility hidden
+        background-color #fff
+        border 1px solid #787878
+        left 0
+        padding 4px 0
+        top 34px
+        border-radius 4px
+        .im-sbox-option
+            cursor pointer
+            color #000
+            padding 4px 10px
+            line-height 1
+            &:hover
+                color: #000
+                opacity: 0.71
+    &-opened
+        .im-sbox-select
+            visibility visible
+            overflow-y scroll
+            height 300px
+        .im-sbox-active
+            &:after
+                transform: rotate(180deg)
+                top 2px
+
+select:disabled ~ .im-sbox-select
+	display none
+
+select:disabled ~ .im-sbox-active
+	opacity 0.5
+
+.b-mobile-copyright
+    @media $max_xs
+        margin 20px 0 6px
+    @media $min_sm
+        display none
+
+.b-popup_success
+    .b-popup__close
+        bottom: auto;
+        top: 7px;
+        right: -20px;
+
+.timing-widget
+    position: relative;
+    line-height: 1;
+    color: transparent;
+    a
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        text-align: center !important;
+        background-color: transparent !important;
+        border: none !important;

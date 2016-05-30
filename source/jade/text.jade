@@ -1,0 +1,70 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title text
+		include inc/head
+	body(class="p-text")
+		.b-box
+			.b-common-wrap
+				include partials/header
+				
+				+b('section').bread
+					.b-container
+						+e('').left
+							+b('nav').breadcrumbs
+								+e('a').item Автомойки
+								+e('span').item._active Статья
+						+e('').right
+							+b('a')(data-id="#add-vacancy").add._active._black.im-popup-link Добавить вакансию
+				+b('section').text
+					.b-container
+						img(src="http://placehold.it/345x240", alt="").-img-left
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptas, itaque? Nihil voluptas harum recusandae vel saepe maiores tempora sapiente beatae, quibusdam rem quaerat magni, autem soluta minima, quis eius.
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vitae architecto iste quas nihil voluptates, mollitia, ut, asperiores quam voluptatum debitis, eum animi ducimus fugit alias provident facilis dicta reiciendis.
+						img(src="http://placehold.it/345x240", alt="").-img-right
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo modi, quisquam illum dolorem minus provident labore asperiores animi possimus obcaecati pariatur voluptatem eligendi ratione. Porro, veritatis temporibus iusto laboriosam iste.
+						h1 Заголовок
+						h2 Заголовок
+						h3 Заголовок
+						h4 Заголовок
+						h5 Заголовок
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, error facere in cupiditate dolore repellat exercitationem voluptas deserunt voluptates suscipit libero ratione quasi doloremque velit eveniet corporis laborum voluptatem. Quisquam.
+						p Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Nam minus itaque est excepturi, quisquam deleniti totam voluptate at similique adipisci rem, cum error repellendus reprehenderit doloremque rerum veritatis mollitia eius.
+						ul
+							li Тест
+							li Тест
+							li Тест
+							li Тест
+							li Тест
+						ol
+							li Тест
+							li Тест
+							li Тест
+							li Тест
+							li Тест
+						table
+							tr
+								th Заголовок таблицы
+								th Заголовок таблицы
+								th Заголовок таблицы
+							tr
+								td Lorem ipsum dolor sit amet.
+								td Lorem ipsum dolor sit amet.
+								td Lorem ipsum dolor sit amet.
+							tr
+								td Lorem ipsum dolor sit amet.
+								td Lorem ipsum dolor sit amet.
+								td Lorem ipsum dolor sit amet.
+							tr
+								td Lorem ipsum dolor sit amet.
+								td Lorem ipsum dolor sit amet.
+								td Lorem ipsum dolor sit amet.
+
+			include partials/footer
+		include inc/vendor-scripts

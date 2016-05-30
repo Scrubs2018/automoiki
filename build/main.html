@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>main</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body class="p-main">
+    <div class="b-box">
+      <div class="b-common-wrap">
+        <header class="b-header">
+          <div class="b-container">
+            <div class="b-header__left">
+              <div class="b-header__rside-row">
+                <div class="b-sel-region"><span class="b-sel-region__title">Ваш регион:</span><a class="b-sel-region__link">Минск и Минская область</a>
+                </div>
+                <div class="b-sel-region-wrap">
+                  <div class="b-popup b-popup_sm">
+                    <div class="b-popup__top"><span class="b-popup__title">Доп. услуги</span><a class="b-popup__close"></a>
+                    </div>
+                    <div class="b-popup__body">
+                      <div class="b-sel-region-box">
+                        <div class="b-sel-region-box__left"><a class="b-sel-region-box__item b-sel-region-box__item_active">Беларусь</a>
+                        </div>
+                        <div class="b-sel-region-box__right"><a class="b-sel-region-box__item">Минск и минская область</a><a class="b-sel-region-box__item b-sel-region-box__item_active">Гомель и гомельская область</a><a class="b-sel-region-box__item">Витебск и витебская область</a><a class="b-sel-region-box__item">Брест и брестская область</a><a class="b-sel-region-box__item">Гродно и гродненская область</a><a class="b-sel-region-box__item">Могилев и могилевская область</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-popup__bottom"><span class="b-popup__bottom-text">Выбранный регион: <span>Гомель и гомельская область</span></span><a class="b-btn b-btn_md">OK</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="b-header__lside-row">
+                <div class="b-disc-link"><a class="b-disc-link__inside"><span class="b-disc-link__link">Акции и скидки</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="b-header__middle"><a class="b-logo"><img src="img/logo.png" class="b-logo__img" alt=""/></a>
+            </div>
+            <div class="b-header__right">
+              <div class="b-header__rside-row">
+                <div class="b-header__top-menu-wrap">
+                  <nav class="b-top-menu"><a class="b-top-menu__link">О мойках</a><a class="b-top-menu__link">Вакансии</a><a class="b-top-menu__link">Контакты</a>
+                  </nav>
+                </div>
+                <div class="b-header__social-wrap">
+                  <div class="b-social"><a class="b-social__item b-social__item_vk"></a><a class="b-social__item b-social__item_fb"></a><a class="b-social__item b-social__item_tw"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="b-header__rside-row">
+                <form class="b-search-form">
+                  <input placeholder="Введите запрос" class="b-search-form__input" type="text"/>
+                  <input type="submit" value="Поиск" class="b-search-form__submit"/>
+                </form>
+              </div>
+              <div class="b-header__rside-row">
+                <div class="b-header__add-wash-wrap"><a data-id="#add-wash" class="b-add b-add_green im-popup-link">Добавить автомойку</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="b-banner"><img src="http://placehold.it/1200x200" class="b-banner__img" alt=""/>
+          </section>
+          <div class="b-mobile-btns">
+            <div class="b-mobile-btns__item"><a href="#" class="b-mob-link b-mob-link_icon b-mob-link_percent b-mob-link_red">Акции и скидки</a>
+            </div>
+            <div class="b-mobile-btns__item"><a data-id="#add-wash" class="b-mob-link b-mob-link_green b-mob-link_icon b-mob-link_pluse im-popup-link">Добавить автомойку</a>
+            </div>
+          </div>
+        </header>
+        <section class="b-cars">
+          <div class="b-container">
+            <form class="b-sel-form">
+              <div class="b-sel-form__col-wrap">
+                <div class="b-sel-form__col">
+                  <label class="b-check-a">
+                    <input type="checkbox" class="b-check-a__native"/><span class="b-check-a__check"></span><span class="b-check-a__icon b-check-a__icon_legk"></span><span class="b-check-a__title">Легковой автомобиль</span>
+                  </label>
+                  <div class="b-sel-form__line">
+                    <label class="b-check">
+                      <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                    </label>
+                  </div>
+                  <div class="b-sel-form__line">
+                    <label class="b-check">
+                      <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="b-sel-form__col">
+                  <label class="b-check-a">
+                    <input type="checkbox" class="b-check-a__native"/><span class="b-check-a__check"></span><span class="b-check-a__icon b-check-a__icon_jeep"></span><span class="b-check-a__title">Джип</span>
+                  </label>
+                  <div class="b-sel-form__line">
+                    <label class="b-check">
+                      <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                    </label>
+                  </div>
+                  <div class="b-sel-form__line">
+                    <label class="b-check">
+                      <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="b-sel-form__col">
+                  <label class="b-check-a">
+                    <input type="checkbox" class="b-check-a__native"/><span class="b-check-a__check"></span><span class="b-check-a__icon b-check-a__icon_bus"></span><span class="b-check-a__title">Микроавтобус</span>
+                  </label>
+                  <div class="b-sel-form__line">
+                    <label class="b-check">
+                      <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                    </label>
+                  </div>
+                  <div class="b-sel-form__line">
+                    <label class="b-check">
+                      <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="b-sel-form__col">
+                  <label class="b-check-a">
+                    <input type="checkbox" class="b-check-a__native"/><span class="b-check-a__check"></span><span class="b-check-a__icon b-check-a__icon_gruz"></span><span class="b-check-a__title">Грузовой автомобиль</span>
+                  </label>
+                  <div class="b-sel-form__line">
+                    <label class="b-check">
+                      <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                    </label>
+                  </div>
+                  <div class="b-sel-form__line"><a class="b-more-serv">Дополнительные услуги</a>
+                    <div class="b-more-box">
+                      <div class="b-popup b-popup_sm">
+                        <div class="b-popup__top"><span class="b-popup__title">Доп. услуги</span><a class="b-popup__close"></a>
+                        </div>
+                        <div class="b-popup__body">
+                          <div class="b-popup__row">
+                            <label class="b-check b-check_sm">
+                              <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                            </label>
+                          </div>
+                          <div class="b-popup__row">
+                            <label class="b-check b-check_sm">
+                              <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                            </label>
+                          </div>
+                          <div class="b-popup__row">
+                            <label class="b-check b-check_sm">
+                              <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                            </label>
+                          </div>
+                          <div class="b-popup__row">
+                            <label class="b-check b-check_sm">
+                              <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                            </label>
+                          </div>
+                          <div class="b-popup__row">
+                            <label class="b-check b-check_sm">
+                              <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                            </label>
+                          </div>
+                          <div class="b-popup__row">
+                            <label class="b-check b-check_sm">
+                              <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Автоматическая мойка</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="b-popup__bottom b-popup__bottom_center"><a class="b-btn b-btn_md">OK</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="b-sel-form__bottom">
+                <div class="b-sel-form__bottom-left"><a class="b-where-i">Где-я?</a>
+                </div>
+                <div class="b-sel-form__bottom-right">
+                  <label class="b-reset">
+                    <input value="Сбросить все фильтры" type="reset" class="b-reset__native"/><span class="b-reset__title">Сбросить все фильтры</span>
+                  </label>
+                  <input type="submit" value="Подобрать автомойки" class="b-btn"/>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="b-map">
+          <div id="map"></div>
+        </section>
+        <section class="b-companies">
+          <div class="b-companies__row">
+            <div class="b-company b-company_disc b-company_vip"><span class="b-disc-label">Акция</span>
+              <div class="b-company__left">
+                <div class="b-company__logo-wrap"><img src="http://placehold.it/220x120" class="b-company__logo" alt=""/>
+                </div>
+                <div class="b-company__info"><a class="b-company__title">АВТОSpa</a>
+                  <ul class="b-company__list">
+                    <li>ручная мойка</li>
+                    <li>ручная мойка</li>
+                    <li>ручная мойка</li>
+                    <li>ручная мойка</li>
+                    <li>ручная мойка</li>
+                    <li>ручная мойка</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="b-company__right">
+                <div class="b-company__top">
+                  <div class="b-icons"><img src="img/icons/24-r.png" class="b-icons__icon" alt=""/><img src="img/icons/cart-r.png" class="b-icons__icon" alt=""/><img src="img/icons/coffee-r.png" class="b-icons__icon" alt=""/><img src="img/icons/food-r.png" class="b-icons__icon" alt=""/><img src="img/icons/juice-r.png" class="b-icons__icon" alt=""/><img src="img/icons/parking-r.png" class="b-icons__icon" alt=""/><img src="img/icons/phone-r.png" class="b-icons__icon" alt=""/><img src="img/icons/tools-r.png" class="b-icons__icon" alt=""/><img src="img/icons/wifi-r.png" class="b-icons__icon" alt=""/><img src="img/icons/zapr-r.png" class="b-icons__icon" alt=""/>
+                  </div>
+                </div>
+                <div class="b-company__half">
+                  <div class="b-company__line">
+                    <div class="b-contact-item b-contact-item_addr"><span class="b-contact-item__row">Lorem ipsum dolor sit amet.</span>
+                    </div>
+                  </div>
+                  <div class="b-company__line">
+                    <div class="b-contact-item b-contact-item_phone"><span class="b-contact-item__row">Lorem ipsum dolor sit amet.</span><span class="b-contact-item__row">Lorem ipsum dolor sit amet.</span><span class="b-contact-item__row">Lorem ipsum dolor sit amet.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="b-company__half b-company__half_center">
+                  <div class="b-company__line">
+                    <div class="b-contact-item b-contact-item_time"><span class="b-contact-item__row">Lorem ipsum dolor sit amet.</span>
+                    </div>
+                  </div>
+                  <div class="b-company__line"><a href="#" class="b-btn-b">Записаться через timing.by</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="b-companies__row">
+            <div class="b-company b-company_disc"><span class="b-disc-label">Акция</span>
+              <div class="b-company__left">
+                <div class="b-company__logo-wrap"><img src="http://placehold.it/220x120" class="b-company__logo" alt=""/>
+                </div>
+                <div class="b-company__info"><a class="b-company__title">АВТОSpa</a>
+                  <ul class="b-company__list">
+                    <li>ручная мойка</li>
+                    <li>ручная мойка</li>
+                    <li>ручная мойка</li>
+                    <li>ручная мойка</li>
+                    <li>ручная мойка</li>
+                    <li>ручная мойка</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="b-company__right">
+                <div class="b-company__top">
+                  <div class="b-icons"><img src="img/icons/24-r.png" class="b-icons__icon" alt=""/><img src="img/icons/cart-r.png" class="b-icons__icon" alt=""/><img src="img/icons/coffee-r.png" class="b-icons__icon" alt=""/><img src="img/icons/food-r.png" class="b-icons__icon" alt=""/><img src="img/icons/juice-r.png" class="b-icons__icon" alt=""/><img src="img/icons/parking-r.png" class="b-icons__icon" alt=""/><img src="img/icons/phone-r.png" class="b-icons__icon" alt=""/><img src="img/icons/tools-r.png" class="b-icons__icon" alt=""/><img src="img/icons/wifi-r.png" class="b-icons__icon" alt=""/><img src="img/icons/zapr-r.png" class="b-icons__icon" alt=""/>
+                  </div>
+                </div>
+                <div class="b-company__half">
+                  <div class="b-company__line">
+                    <div class="b-contact-item b-contact-item_addr"><span class="b-contact-item__row">Lorem ipsum dolor sit amet.</span>
+                    </div>
+                  </div>
+                  <div class="b-company__line">
+                    <div class="b-contact-item b-contact-item_phone"><span class="b-contact-item__row">Lorem ipsum dolor sit amet.</span><span class="b-contact-item__row">Lorem ipsum dolor sit amet.</span><span class="b-contact-item__row">Lorem ipsum dolor sit amet.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="b-company__half b-company__half_center">
+                  <div class="b-company__line">
+                    <div class="b-contact-item b-contact-item_time"><span class="b-contact-item__row">Lorem ipsum dolor sit amet.</span>
+                    </div>
+                  </div>
+                  <div class="b-company__line"><a href="#" class="b-btn-b">Записаться через timing.by</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="b-companies__show-more-wrap"><a href="#" class="b-btn b-btn_show-more">Показать ещё</a>
+          </div>
+        </section>
+        <section class="b-banner"><img src="http://placehold.it/1200x200" class="b-banner__img" alt=""/>
+        </section>
+      </div>
+      <footer class="b-footer">
+        <div class="b-container">
+          <div class="b-footer__left">
+            <div class="b-footer__row">
+              <div class="b-footer__top-menu-wrap">
+                <nav class="b-top-menu"><a class="b-top-menu__link">О мойках</a><a class="b-top-menu__link">Вакансии</a><a class="b-top-menu__link">Контакты</a>
+                </nav>
+              </div>
+            </div>
+            <div class="b-footer__row">
+              <div class="b-footer__ad-on-site"><a href="#">Реклама на сайте</a>
+              </div>
+            </div>
+          </div>
+          <div class="b-footer__middle"><span>2015&nbsp;</span><a href="#">WASHTIME.CZ</a>
+          </div>
+          <div class="b-footer__right">
+            <div class="b-footer__row"><span>Создание сайта&nbsp;</span><a href="#">Веб студия "Оригами"</a>
+            </div>
+            <div class="b-footer__row">
+              <div class="b-footer__social-wrap">
+                <div class="b-social"><a class="b-social__item b-social__item_vk"></a><a class="b-social__item b-social__item_fb"></a><a class="b-social__item b-social__item_tw"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="im-popups">
+        <div id="add-wash" class="im-popup">
+          <div class="im-popup-inside">
+            <div class="b-popup b-popup_big">
+              <form class="poster">
+                <div class="b-popup__top"><span class="b-popup__title">Добавить автомойку</span><a href="#" class="b-popup__close"></a>
+                </div>
+                <div class="b-popup__body">
+                  <p class="error"></p>
+                  <div class="b-popup__row"><span class="b-text-box__title">Выберите типы обслуживаемых автомобилей</span>
+                    <div class="b-popup__col">
+                      <label class="b-check-a">
+                        <input type="checkbox" class="b-check-a__native"/><span class="b-check-a__check"></span><span class="b-check-a__icon b-check-a__icon_legk"></span><span class="b-check-a__title">Легковой автомобиль</span>
+                      </label>
+                    </div>
+                    <div class="b-popup__col">
+                      <label class="b-check-a">
+                        <input type="checkbox" class="b-check-a__native"/><span class="b-check-a__check"></span><span class="b-check-a__icon b-check-a__icon_jeep"></span><span class="b-check-a__title">Джип</span>
+                      </label>
+                    </div>
+                    <div class="b-popup__col">
+                      <label class="b-check-a">
+                        <input type="checkbox" class="b-check-a__native"/><span class="b-check-a__check"></span><span class="b-check-a__icon b-check-a__icon_bus"></span><span class="b-check-a__title">Микроавтобус</span>
+                      </label>
+                    </div>
+                    <div class="b-popup__col">
+                      <label class="b-check-a">
+                        <input type="checkbox" class="b-check-a__native"/><span class="b-check-a__check"></span><span class="b-check-a__icon b-check-a__icon_gruz"></span><span class="b-check-a__title">Грузовой автомобиль</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="b-popup__separate">
+                  </div>
+                  <div class="b-popup__row b-popup__row_halfs">
+                    <div class="b-popup__half b-popup__half_col">
+                      <div class="b-text-box"><span class="b-text-box__title b-text-box__title_inline">Название мойки<span class="b-text-box__imp">*</span>:
+                          <input type="text" class="b-input"/></span>
+                      </div>
+                      <div class="b-checkboxes"><span class="b-text-box__title">Тип мойки:</span>
+                        <label class="b-check b-check_sm">
+                          <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__icon"></span><span class="b-check__title">Автоматическая мойка (портальная)</span>
+                        </label>
+                        <label class="b-check b-check_sm">
+                          <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__icon"></span><span class="b-check__title">Мойка самообслуживаний</span>
+                        </label>
+                        <label class="b-check b-check_sm">
+                          <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__icon"></span><span class="b-check__title">Ручная автомойка</span>
+                        </label>
+                      </div>
+                      <div class="b-text-box"><span class="b-text-box__title">Адрес автомойки</span>
+                        <textarea class="b-textarea"></textarea>
+                      </div>
+                      <div class="b-select-box"><span class="b-text-box__title">Район:</span>
+                        <select class="b-select">
+                          <option class="b-select__option"> = выбрать = 
+                          </option>
+                          <option class="b-select__option">Минск и минская область
+                          </option>
+                          <option class="b-select__option">Борисов
+                          </option>
+                          <option class="b-select__option">Жодино
+                          </option>
+                          <option class="b-select__option">Гомель и Гомельская область
+                          </option>
+                          <option class="b-select__option">Витебск и Витебская область
+                          </option>
+                          <option class="b-select__option">Полоцк
+                          </option>
+                          <option class="b-select__option">Новополцк
+                          </option>
+                          <option class="b-select__option">Брест и Брестская область
+                          </option>
+                          <option class="b-select__option">Пинск
+                          </option>
+                          <option class="b-select__option">Гродно и Гродненская область
+                          </option>
+                          <option class="b-select__option">Могилев и Могилевская область
+                          </option>
+                        </select>
+                      </div>
+                      <div class="b-text-box"><span class="b-text-box__title">Режим работы:</span><span class="b-text-box__small b-text-box__small_text">(дни недели, время/круглосуточно)</span>
+                        <textarea class="b-textarea"></textarea>
+                      </div>
+                      <div class="b-text-box"><span class="b-text-box__title">Дополнительная информация:</span><span class="b-text-box__small b-text-box__small_text">Любая информация, касающаяся вашей автомойки</span>
+                        <textarea class="b-textarea"></textarea>
+                      </div>
+                    </div>
+                    <div class="b-popup__half b-popup__half_col">
+                      <div class="b-popup__checkboxes b-popup__checkboxes_halfs"><span class="b-text-box__title">Услуги</span>
+                        <div class="b-popup__half b-popup__half_col">
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Ручная автомойка</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Бесконтактная мойка</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Холодный воск</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Горячий воск</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Твёрдый воск</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Мойка дисков</span>
+                          </label>
+                          <label class="b-check b-check_sm"> 
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Мойка двигателя</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Мойка арок</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Мойка днища</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Нанопокрытие стёкол</span>
+                          </label>
+                        </div>
+                        <div class="b-popup__half b-popup__half_col">
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Сухая уборка салона</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Натирка пластика</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Чернение резины</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Натирка наружных пластиковых элементов</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Протирка стёкол изнутри</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Обработка кожи</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Химчистка</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Полировка фар</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Полировка кузова</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="b-popup__checkboxes b-popup__checkboxes_halfs"><span class="b-text-box__title">Дополнительные услуги:</span>
+                        <div class="b-popup__half b-popup__half_col">
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">кофе/чай</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Холодные напитки</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Парковка</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">АЗС</span>
+                          </label>
+                        </div>
+                        <div class="b-popup__half b-popup__half_col">
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">СТО</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">WI/FI</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Кафе</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">предварительная запись</span>
+                          </label>
+                          <label class="b-check b-check_sm">
+                            <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">Минимаркет</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="b-popup__checkboxes"><span class="b-text-box__title">Зимний пакет:</span>
+                        <label class="b-check b-check_sm"> 
+                          <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">обработка стекол антиобледенительным средством</span>
+                        </label>
+                        <label class="b-check b-check_sm">
+                          <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">обработка дверных замков антиобледенительным средством</span>
+                        </label>
+                        <label class="b-check b-check_sm">
+                          <input type="checkbox" class="b-check__native"/><span class="b-check__check"></span><span class="b-check__title">обработка резиновых уплотнений силиконом</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-popup__separate">
+                  </div>
+                  <div class="b-popup__row-text"><span>Контактные данные для связи с вами</span>
+                  </div>
+                  <div class="b-popup__row">
+                    <div class="b-text-box"><span class="b-text-box__title">Номер телефона<span class="b-text-box__imp">*</span>:</span>
+                      <input type="text" class="b-input"/>
+                    </div>
+                  </div>
+                  <div class="b-popup__row">
+                    <div class="b-text-box"><span class="b-text-box__title">Ваше имя<span class="b-text-box__imp">*</span>:</span>
+                      <input type="text" class="b-input"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="b-popup__bottom"><a class="b-btn">Отправить</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="add-vacancy" class="im-popup">
+          <div class="im-popup-inside">
+            <div class="b-popup b-popup_middle">
+              <div class="b-popup__top"><span class="b-popup__title">Добавить вакансию</span><a class="b-popup__close"></a>
+              </div>
+              <div class="b-popup__body">
+                <div class="b-popup__row">
+                  <div class="b-text-box"><span class="b-text-box__title">Название мойки<span class="text-box__imp">*</span></span>
+                    <input type="text" class="b-input"/>
+                  </div>
+                </div>
+                <div class="b-popup__row">
+                  <div class="b-text-box"><span class="b-text-box__title">Название мойки<span class="text-box__imp">*</span></span>
+                    <input type="text" class="b-input"/>
+                  </div>
+                </div>
+                <div class="b-popup__separate">
+                </div>
+                <div class="b-popup__row-text"><span>Контактные данные для связи с вами</span>
+                </div>
+                <div class="b-popup__row">
+                  <div class="b-text-box"><span class="b-text-box__title">Название мойки<span class="text-box__imp">*</span></span>
+                    <textarea value="+375" class="b-textarea"></textarea>
+                  </div>
+                </div>
+                <div class="b-popup__row">
+                  <div class="b-text-box"><span class="b-text-box__title">Название мойки<span class="text-box__imp">*</span></span>
+                    <textarea placeholder="Опишите требования к соискателю" class="b-textarea"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="b-popup__bottom"><a class="b-btn">Отправить</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/client.min.js"></script>
+  </body>
+</html>

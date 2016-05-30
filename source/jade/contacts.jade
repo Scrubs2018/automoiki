@@ -1,0 +1,56 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title contacts
+		include inc/head
+	body(class="p-contacts")
+		.b-box
+			.b-common-wrap
+				include partials/header
+				
+				+b('section').bread
+					.b-container
+						+e('').left
+							+b('nav').breadcrumbs
+								+e('a').item Автомойки
+								+e('span').item._active Контакты
+						+e('').right
+							+b('a')(data-id="#add-vacancy").add._active._black.im-popup-link Добавить вакансию
+				+b('section').contacts
+					.b-container
+						+e('').content
+							+b('span').title Avtomoiki.by
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam neque ab esse illo recusandae nobis nostrum voluptates aspernatur modi porro provident, cum excepturi natus dolore temporibus quasi autem nihil ad.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam neque ab esse illo recusandae nobis nostrum voluptates aspernatur modi porro provident, cum excepturi natus dolore temporibus quasi autem nihil ad.
+						+b('').contacts-cols
+							+e('').col-wrap
+								+e('').col
+									+b('').contact-item._phone
+										+e('span').title Телефоны
+										+e('span').row Lorem ipsum dolor sit amet.
+										+e('span').row Lorem ipsum dolor sit amet.
+										+e('span').row Lorem ipsum dolor sit amet.
+								+e('').col
+									+b('').contact-item._mail
+										+e('span').title Email
+										+e('a')(href="#").row Lorem ipsum dolor sit amet.
+								+e('').col
+									+b('').contact-item._skype
+										+e('span').title Skype
+										+e('span').row Lorem ipsum dolor sit amet.
+								+e('').col
+									+b('').contact-item._addr
+										+e('span').title Адрес
+										+e('span').row Lorem ipsum dolor sit amet.
+				+b('section').map
+					#map
+
+
+			include partials/footer
+		include inc/vendor-scripts

@@ -1,0 +1,226 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+    head
+        title main
+        include inc/head
+    body(class="p-main")
+        .b-box
+            .b-common-wrap
+                include partials/header
+                +b('section').cars
+                    .b-container
+                        +b('form').sel-form
+                            +e('').col-wrap
+                                +e('').col
+                                    +b('label').check-a
+                                        +e('input')(type="checkbox").native
+                                        +e('span').check
+                                        +e('span').icon._legk
+                                        +e('span').title Легковой автомобиль
+                                    +e('').line
+                                        +b('label').check
+                                            +e('input')(type="checkbox").native
+                                            +e('span').check
+                                            +e('span').title Автоматическая мойка
+                                    +e('').line
+                                        +b('label').check
+                                            +e('input')(type="checkbox").native
+                                            +e('span').check
+                                            +e('span').title Автоматическая мойка
+                                +e('').col
+                                    +b('label').check-a
+                                        +e('input')(type="checkbox").native
+                                        +e('span').check
+                                        +e('span').icon._jeep
+                                        +e('span').title Джип
+                                    +e('').line
+                                        +b('label').check
+                                            +e('input')(type="checkbox").native
+                                            +e('span').check
+                                            +e('span').title Автоматическая мойка
+                                    +e('').line
+                                        +b('label').check
+                                            +e('input')(type="checkbox").native
+                                            +e('span').check
+                                            +e('span').title Автоматическая мойка
+                                +e('').col
+                                    +b('label').check-a
+                                        +e('input')(type="checkbox").native
+                                        +e('span').check
+                                        +e('span').icon._bus
+                                        +e('span').title Микроавтобус
+                                    +e('').line
+                                        +b('label').check
+                                            +e('input')(type="checkbox").native
+                                            +e('span').check
+                                            +e('span').title Автоматическая мойка
+                                    +e('').line
+                                        +b('label').check
+                                            +e('input')(type="checkbox").native
+                                            +e('span').check
+                                            +e('span').title Автоматическая мойка
+                                +e('').col
+                                    +b('label').check-a
+                                        +e('input')(type="checkbox").native
+                                        +e('span').check
+                                        +e('span').icon._gruz
+                                        +e('span').title Грузовой автомобиль
+                                    +e('').line
+                                        +b('label').check
+                                            +e('input')(type="checkbox").native
+                                            +e('span').check
+                                            +e('span').title Автоматическая мойка
+                                    +e('').line
+                                        +b('a').more-serv Дополнительные услуги
+                                        +b('').more-box
+                                            +b('').popup._sm
+                                                +e('').top
+                                                    +e('span').title Доп. услуги
+                                                    +e('a').close
+                                                +e('').body
+                                                    +e('').row
+                                                        +b('label').check._sm
+                                                            +e('input')(type="checkbox").native
+                                                            +e('span').check
+                                                            +e('span').title Автоматическая мойка
+                                                    +e('').row
+                                                        +b('label').check._sm
+                                                            +e('input')(type="checkbox").native
+                                                            +e('span').check
+                                                            +e('span').title Автоматическая мойка
+                                                    +e('').row
+                                                        +b('label').check._sm
+                                                            +e('input')(type="checkbox").native
+                                                            +e('span').check
+                                                            +e('span').title Автоматическая мойка
+                                                    +e('').row
+                                                        +b('label').check._sm
+                                                            +e('input')(type="checkbox").native
+                                                            +e('span').check
+                                                            +e('span').title Автоматическая мойка
+                                                    +e('').row
+                                                        +b('label').check._sm
+                                                            +e('input')(type="checkbox").native
+                                                            +e('span').check
+                                                            +e('span').title Автоматическая мойка
+                                                    +e('').row
+                                                        +b('label').check._sm
+                                                            +e('input')(type="checkbox").native
+                                                            +e('span').check
+                                                            +e('span').title Автоматическая мойка
+                                                +e('').bottom._center
+                                                    +b('a').btn._md OK
+                            +e('').bottom
+                                +e('').bottom-left
+                                    +b('a').where-i Где-я?
+                                +e('').bottom-right
+                                    +b('label').reset
+                                        +e('input')(value="Сбросить все фильтры" type="reset").native
+                                        +e('span').title Сбросить все фильтры
+                                    +b('input')(type="submit" value="Подобрать автомойки").btn
+                +b('section').map
+                    #map
+                +b('section').companies
+                    +e('').row
+                        +b('').company._vip._disc
+                            +b('span').disc-label Акция
+                            +e('').left
+                                +e('').logo-wrap
+                                    +e('img')(src="http://placehold.it/220x120").logo
+                                +e('').info
+                                    +e('a').title АВТОSpa
+                                    +e('ul').list
+                                        li ручная мойка
+                                        li ручная мойка
+                                        li ручная мойка
+                                        li ручная мойка
+                                        li ручная мойка
+                                        li ручная мойка
+                            +e('').right
+                                +e('').top
+                                    +b('').icons
+                                        +e('img')(src="img/icons/24-r.png").icon
+                                        +e('img')(src="img/icons/cart-r.png").icon
+                                        +e('img')(src="img/icons/coffee-r.png").icon
+                                        +e('img')(src="img/icons/food-r.png").icon
+                                        +e('img')(src="img/icons/juice-r.png").icon
+                                        +e('img')(src="img/icons/parking-r.png").icon
+                                        +e('img')(src="img/icons/phone-r.png").icon
+                                        +e('img')(src="img/icons/tools-r.png").icon
+                                        +e('img')(src="img/icons/wifi-r.png").icon
+                                        +e('img')(src="img/icons/zapr-r.png").icon
+                                +e('').half
+                                    +e('').line
+                                        +b('').contact-item._addr
+                                            +e('span').row Lorem ipsum dolor sit amet.
+                                    +e('').line
+                                        +b('').contact-item._phone
+                                            +e('span').row Lorem ipsum dolor sit amet.
+                                            +e('span').row Lorem ipsum dolor sit amet.
+                                            +e('span').row Lorem ipsum dolor sit amet.
+                                +e('').half._center
+                                    +e('').line
+                                        +b('').contact-item._time
+                                            +e('span').row Lorem ipsum dolor sit amet.
+                                    +e('').line
+                                        +b('a')(href="#").btn-b Записаться через timing.by
+                    +e('').row
+                        +b('').company._disc
+                            +b('span').disc-label Акция
+                            +e('').left
+                                +e('').logo-wrap
+                                    +e('img')(src="http://placehold.it/220x120").logo
+                                +e('').info
+                                    +e('a').title АВТОSpa
+                                    +e('ul').list
+                                        li ручная мойка
+                                        li ручная мойка
+                                        li ручная мойка
+                                        li ручная мойка
+                                        li ручная мойка
+                                        li ручная мойка
+                            +e('').right
+                                +e('').top
+                                    +b('').icons
+                                        +e('img')(src="img/icons/24-r.png").icon
+                                        +e('img')(src="img/icons/cart-r.png").icon
+                                        +e('img')(src="img/icons/coffee-r.png").icon
+                                        +e('img')(src="img/icons/food-r.png").icon
+                                        +e('img')(src="img/icons/juice-r.png").icon
+                                        +e('img')(src="img/icons/parking-r.png").icon
+                                        +e('img')(src="img/icons/phone-r.png").icon
+                                        +e('img')(src="img/icons/tools-r.png").icon
+                                        +e('img')(src="img/icons/wifi-r.png").icon
+                                        +e('img')(src="img/icons/zapr-r.png").icon
+                                +e('').half
+                                    +e('').line
+                                        +b('').contact-item._addr
+                                            +e('span').row Lorem ipsum dolor sit amet.
+                                    +e('').line
+                                        +b('').contact-item._phone
+                                            +e('span').row Lorem ipsum dolor sit amet.
+                                            +e('span').row Lorem ipsum dolor sit amet.
+                                            +e('span').row Lorem ipsum dolor sit amet.
+                                +e('').half._center
+                                    +e('').line
+                                        +b('').contact-item._time
+                                            +e('span').row Lorem ipsum dolor sit amet.
+                                    +e('').line
+                                        +b('a')(href="#").btn-b Записаться через timing.by
+                    +e('').show-more-wrap
+                        +b('a')(href="#").btn._show-more Показать ещё
+                +b('section').banner
+                    +e('img')(src="http://placehold.it/1200x200").img
+
+
+                                
+
+
+            include partials/footer
+        include inc/vendor-scripts

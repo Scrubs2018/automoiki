@@ -1,0 +1,59 @@
++b('header').header
+    .b-container
+        +e('').left
+            +e('').rside-row
+                +b('').sel-region
+                    +e('span').title Ваш регион:
+                    +e('a').link Минск и Минская область
+                +b('').sel-region-wrap
+                    +b('').popup._sm
+                        +e('').top
+                            +e('span').title Доп. услуги
+                            +e('a').close
+                        +e('').body
+                            +b('').sel-region-box
+                                +e('').left
+                                    +e('a').item._active Беларусь
+                                +e('').right
+                                    +e('a').item Минск и минская область
+                                    +e('a').item._active Гомель и гомельская область
+                                    +e('a').item Витебск и витебская область
+                                    +e('a').item Брест и брестская область
+                                    +e('a').item Гродно и гродненская область
+                                    +e('a').item Могилев и могилевская область
+                        +e('').bottom
+                            +e('span').bottom-text Выбранный регион: <span>Гомель и гомельская область</span>
+                            +b('a').btn._md OK
+            +e('').lside-row
+                +b('').disc-link
+                    +e('a').inside
+                        +e('span').link Акции и скидки
+        +e('').middle
+            +b('a').logo
+                +e('img')(src="img/logo.png").img
+        +e('').right
+            +e('').rside-row
+                +e('').top-menu-wrap
+                    +b('nav').top-menu
+                        +e('a').link О мойках
+                        +e('a').link Вакансии
+                        +e('a').link Контакты
+                +e('').social-wrap
+                    +b('').social
+                        +e('a').item._vk
+                        +e('a').item._fb
+                        +e('a').item._tw
+            +e('').rside-row
+                +b('form').search-form
+                    +e('input')(placeholder="Введите запрос").input
+                    +e('input')(type="submit" value="Поиск").submit Поиск
+            +e('').rside-row
+                +e('').add-wash-wrap
+                    +b('a')(data-id="#add-wash").add._green.im-popup-link Добавить автомойку
+    +b('section').banner
+        +e('img')(src="http://placehold.it/1200x200").img
+    +b('').mobile-btns
+        +e('').item
+            +b('a')(href="#").mob-link._icon._red._percent Акции и скидки
+        +e('').item
+            +b('a')(data-id="#add-wash").mob-link._icon._green._pluse.im-popup-link Добавить автомойку

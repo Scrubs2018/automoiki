@@ -1,0 +1,63 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title job
+		include inc/head
+	body(class="p-job")
+		.b-box
+			.b-common-wrap
+				include partials/header
+				
+				+b('section').bread
+					.b-container
+						+e('').left
+							+b('nav').breadcrumbs
+								+e('a').item Автомойки
+								+e('span').item._active Контакты
+						+e('').right
+							+b('a')(data-id="#add-vacancy").add._active._black.im-popup-link Добавить вакансию
+				+b('section').job
+					.b-container
+						+b('').items-list
+							+e('').row
+								+b('').item
+									+e('').top
+										+e('').top-left
+											+e('span').black Мойщик
+										+e('').top-right
+											+e('span').black Уровень з/п от 6 000 000 руб.
+									+e('').content
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laborum quo laboriosam ullam recusandae vitae temporibus voluptatum, accusamus ducimus, rerum sequi aliquam placeat illo molestias aliquid natus, cupiditate magnam sit.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam amet, ipsam commodi facilis et quo odit eum ullam sunt magnam.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ad! 
+							+e('').row
+								+b('').item
+									+e('').top
+										+e('').top-left
+											+e('span').black Мойщик
+										+e('').top-right
+											+e('span').black Уровень з/п от 6 000 000 руб.
+									+e('').content
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laborum quo laboriosam ullam recusandae vitae temporibus voluptatum, accusamus ducimus, rerum sequi aliquam placeat illo molestias aliquid natus, cupiditate magnam sit.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam amet, ipsam commodi facilis et quo odit eum ullam sunt magnam.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ad! 
+							+e('').row
+								+b('').item
+									+e('').top
+										+e('').top-left
+											+e('span').black Мойщик
+										+e('').top-right
+											+e('span').black Уровень з/п от 6 000 000 руб.
+									+e('').content
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laborum quo laboriosam ullam recusandae vitae temporibus voluptatum, accusamus ducimus, rerum sequi aliquam placeat illo molestias aliquid natus, cupiditate magnam sit.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam amet, ipsam commodi facilis et quo odit eum ullam sunt magnam.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ad! 
+
+			include partials/footer
+		include inc/vendor-scripts

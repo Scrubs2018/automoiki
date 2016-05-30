@@ -1,0 +1,204 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title company
+		include inc/head
+	body(class="p-company")
+		.b-box
+			.b-common-wrap
+				include partials/header
+				+b('section').bread
+					.b-container
+						+e('').left
+							+b('nav').breadcrumbs
+								+e('a').item Автомойки
+								+e('span').item._active Контакты
+						+e('').right
+							+b('a')(data-id="#add-vacancy").add._active._black.im-popup-link Добавить вакансию
+				+b('section').disc
+					.b-container
+						+e('').top
+							+e('').top-left
+								+b('span').disc-label Акция компании
+							+e('').top-right
+								+b('span').title Lorem ipsum dolor sit amet.
+						+e('').body
+							+e('').row
+								+b('').disc-item
+									+e('span').title Lorem ipsum dolor sit amet, consectetur.
+									+e('').body
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dolores maxime voluptatum assumenda, alias nisi, aperiam, recusandae labore ipsam animi nemo sunt debitis. Obcaecati culpa, in, porro sapiente amet perspiciatis!
+							+e('').row
+								+b('').disc-item
+									+e('span').title Lorem ipsum dolor sit amet, consectetur.
+									+e('').body
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dolores maxime voluptatum assumenda, alias nisi, aperiam, recusandae labore ipsam animi nemo sunt debitis. Obcaecati culpa, in, porro sapiente amet perspiciatis!
+							+e('').row
+								+b('').disc-item
+									+e('span').title Lorem ipsum dolor sit amet, consectetur.
+									+e('').body
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dolores maxime voluptatum assumenda, alias nisi, aperiam, recusandae labore ipsam animi nemo sunt debitis. Obcaecati culpa, in, porro sapiente amet perspiciatis!
+				+b('section').washing
+					.b-container
+						+e('').main
+							+e('').left
+								+b('').washing-box
+									+e('').wrap
+										+e('').left
+											+e('img')(src="http://placehold.it/180x80").logo
+										+e('').right
+											+e('').title
+												+b('span').title-a AV мойка
+											+e('').right-row
+												+b('').list-box
+													+e('span').title Услуги:
+													+e('ul').list
+														+e('li').item Lorem ipsum.
+														+e('li').item Lorem ipsum.
+														+e('li').item Lorem ipsum.
+														+e('li').item Lorem ipsum.
+														+e('li').item Lorem ipsum.
+														+e('li').item Lorem ipsum.
+														+e('li').item Lorem ipsum.
+														+e('li').item Lorem ipsum.
+											+e('').right-row
+												+b('').list-box
+													+e('span').title Услуги:
+													+e('ul').list
+														+e('li').item Lorem ipsum.
+														+e('li').item Lorem ipsum.
+														+e('li').item Lorem ipsum.
+									+e('').bottom
+										+b('').services-icons
+											+e('img')(src="http://placehold.it/50x50").icon
+											+e('img')(src="http://placehold.it/50x50").icon
+											+e('img')(src="http://placehold.it/50x50").icon
+											+e('img')(src="http://placehold.it/50x50").icon
+											+e('img')(src="http://placehold.it/50x50").icon
+											+e('img')(src="http://placehold.it/50x50").icon
+											+e('img')(src="http://placehold.it/50x50").icon
+											+e('img')(src="http://placehold.it/50x50").icon
+							+e('').right
+								+b('a').btn-b Записаться через timing.by
+								+e('').contacts
+									+e('').right-row
+											+b('').contact-item._time
+												+e('span').row Lorem ipsum dolor sit amet.
+									+e('').right-row
+											+b('').contact-item._phone
+												+e('span').row Lorem ipsum dolor sit amet.
+												+e('span').row Lorem ipsum dolor sit amet.
+												+e('span').row Lorem ipsum dolor sit amet.
+									+e('').right-row
+											+b('').contact-item._addr
+												+e('span').row Lorem ipsum dolor sit amet.
+								+e('').map
+									#small-map
+						+e('')(class="carousel").owl-carousel
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+							+e('img')(src="http://placehold.it/200x130").img
+				+b('section').send-review
+					+e('').top
+						.b-container
+							+e('').top-items-wrap
+								+e('').top-item
+									+b('span').rev-icon._views
+										+e('').inside 32
+								+e('').top-item
+									+b('span').rev-icon._comments
+										+e('').inside 5
+								+e('').top-item
+									+b('span').rev-icon._likes
+										+e('').inside 1
+					+e('').body
+						.b-container
+							+e('').body-inside
+								+e('').title
+									+b('span').title-a Оставьте отзыв
+								+b('form').review-form
+									+e('').row
+										+b('').review-links
+											+e('').col
+												+e('span').title Войти при помощи
+											+e('').col
+												+b('').social-icons
+													+e('').col
+														+b('a').soc._vk
+													+e('').col
+														+b('a').soc._fb
+													+e('').col
+														+b('a').soc._tw
+													+e('').col
+														+b('a').soc._ya
+													+e('').col
+														+b('a').soc._gp
+											+e('').col
+												+e('a').why Для чего авторизация?
+									+e('').row
+										+b('input')(type="text" placeholder="Ваше имя").input-a
+									+e('').row
+										textarea(placeholder="Напишите отзыв" rows="10").b-textarea-a
+									+e('').row
+										+e('a').recommend Рекомендую
+									+e('').row
+										button(type="submit").b-btn Отправить отзыв
+									+e('').row
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quidem, nostrum quae assumenda iste facere ullam nulla magni, ipsa modi.
+				+b('section').reviews-list
+					.b-container
+						+b('').items-list
+							+e('').top
+								+b('span').title-a Отзывы
+							+e('').row
+								+b('').item
+									+e('').top
+										+e('').top-left
+											+e('span').black Мойщик
+										+e('').top-right
+											+e('span').black Уровень з/п от 6 000 000 руб.
+									+e('').content
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laborum quo laboriosam ullam recusandae vitae temporibus voluptatum, accusamus ducimus, rerum sequi aliquam placeat illo molestias aliquid natus, cupiditate magnam sit.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam amet, ipsam commodi facilis et quo odit eum ullam sunt magnam.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ad! 
+							+e('').row
+								+b('').item
+									+e('').top
+										+e('').top-left
+											+e('span').black Мойщик
+										+e('').top-right
+											+e('span').black Уровень з/п от 6 000 000 руб.
+									+e('').content
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laborum quo laboriosam ullam recusandae vitae temporibus voluptatum, accusamus ducimus, rerum sequi aliquam placeat illo molestias aliquid natus, cupiditate magnam sit.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam amet, ipsam commodi facilis et quo odit eum ullam sunt magnam.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ad! 
+							+e('').row
+								+b('').item
+									+e('').top
+										+e('').top-left
+											+e('span').black Мойщик
+										+e('').top-right
+											+e('span').black Уровень з/п от 6 000 000 руб.
+									+e('').content
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laborum quo laboriosam ullam recusandae vitae temporibus voluptatum, accusamus ducimus, rerum sequi aliquam placeat illo molestias aliquid natus, cupiditate magnam sit.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam amet, ipsam commodi facilis et quo odit eum ullam sunt magnam.
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ad! 
+
+			include partials/footer
+		include inc/vendor-scripts
