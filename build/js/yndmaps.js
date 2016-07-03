@@ -58,8 +58,6 @@ if ($('#map').length) {
 
             var center = latitude + ',' + longitude;
 
-            console.log(center);
-
             myMap.setCenter([latitude, longitude], 13);
 
             var mark = new ymaps.Placemark([latitude, longitude], {
